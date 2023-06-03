@@ -25,10 +25,13 @@ func reverse(x int) int {
 		output = (output * 10) + rem
 		input = quo
 	}
+
+	//the if condition by default evaluated to "true". See below there is no "true" mentioned
 	if negative {
 		output = output * -1
 	}
 
+	//below is how you find the max and min value of an integer type in golang
 	if output > math.MaxInt32 || output < math.MinInt32 {
 		return 0
 	}
