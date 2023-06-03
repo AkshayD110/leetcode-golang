@@ -27,8 +27,9 @@ func reverse(x int) int {
 	}
 	if negative {
 		output = output * -1
-	
-	if output > math.MaxInt32 || output < math.MinInt32{
+	}
+
+	if output > math.MaxInt32 || output < math.MinInt32 {
 		return 0
 	}
 	return output
