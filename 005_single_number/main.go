@@ -11,8 +11,11 @@ func main() {
 }
 
 func singleNumber(nums []int) int {
-
+	//sort the array first. Below is just a way to sort on an Int array
+	//https://pkg.go.dev/sort#example-package
+	//https://pkg.go.dev/sort#Slice
 	sort.Ints(nums)
+
 	for i := 0; i < len(nums)-1; i++ {
 		if nums[i] != nums[i+1] {
 
