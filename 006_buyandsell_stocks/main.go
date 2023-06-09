@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	output := maxProfit([]int{2, 4, 1})
+	output := maxProfit_opti([]int{7, 1, 5, 3, 6, 4})
 	fmt.Println(output)
 }
 
@@ -32,4 +32,20 @@ func maxProfit(prices []int) int {
 		return 0
 	}
 	return maxPrice - leastPrice
+}
+
+func maxProfit_opti(prices []int) int {
+	maxProfitValue := 0
+	leastBuyValue := prices[0]
+	for _, val := range prices {
+		if val < leastBuyValue {
+			leastBuyValue = val
+		} else {
+			currentProValue := val - leastBuyValue
+			if currentProValue > maxProfitValue {
+				maxProfitValue = currentProValue
+			}
+		}
+	}
+	return maxProfitValue
 }

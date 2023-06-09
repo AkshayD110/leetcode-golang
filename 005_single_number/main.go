@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	output := singleNumber([]int{1, 2, 1, 2, 3})
+	output := singleNumber_mod([]int{1, 2, 1, 2, 3})
 	fmt.Println(output)
 }
 
@@ -24,4 +24,12 @@ func singleNumber(nums []int) int {
 		i++
 	}
 	return nums[len(nums)-1]
+}
+
+//xor method of solving
+func singleNumber_mod(nums []int) int {
+	for i := 1; i < len(nums); i++ {
+		nums[0] ^= nums[i]
+	}
+	return nums[0]
 }
