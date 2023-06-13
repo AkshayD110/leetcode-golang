@@ -12,6 +12,8 @@ func main() {
 
 func maxProfit(prices []int) int {
 	unsorted := make([]int, len(prices))
+	//note how the original slice change on just assigning to old
+	//https://stackoverflow.com/a/69629943
 	copy(unsorted, prices)
 	mapIndexPrice := make(map[int]int)
 	for i, num := range prices {
@@ -34,6 +36,7 @@ func maxProfit(prices []int) int {
 	return maxPrice - leastPrice
 }
 
+//O(n) solution
 func maxProfit_opti(prices []int) int {
 	maxProfitValue := 0
 	leastBuyValue := prices[0]
