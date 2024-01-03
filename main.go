@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"leetcode_golang/search_insert_position"
+	"leetcode_golang/remove_duplicates"
 )
 
 func main() {
-	fmt.Println("Solving prob 10")
-	value := search_insert_position.SearchInsert([]int{1, 3, 5, 6}, 4)
+	fmt.Println("Solving prob 11")
+	value := remove_duplicates.RemoveDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4})
 	fmt.Println(value)
 }
