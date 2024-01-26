@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"leetcode_golang/maxsubarray"
+	"leetcode_golang/remove_element"
 )
 
 func main() {
 	fmt.Println("Solving prob 11")
 
-	value := maxsubarray.MaxSubArray([]int{-1, 0, -2})
+	value := remove_element.RemoveElement([]int{3, 2, 2, 3}, 3)
 	fmt.Println(value)
 }
